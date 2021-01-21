@@ -1,0 +1,58 @@
+<!-- <div fxLayoutAlign="center" fxFlexFill class="main" style="background-color:#3F5185;">
+  <mat-card fxFlex="25">
+    <form [formGroup]='loginForm' fxLayoutAlign="stretch" fxLayout="column">
+      <div class="pr-5">
+        <p>Sign in with your app id to continue.</p>
+        <mat-form-field>
+          <input type="email" formControlName="email" matInput placeholder="Email">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input type="password" formControlName="password" matInput placeholder="Password">
+        </mat-form-field>
+      </div>
+    </form>
+    <label>
+      <input type="checkbox">Stay logged in
+    </label> <br>
+    <button mat-button type="submit" color="accent" (click)=onclick()>Submit</button>
+  </mat-card>
+</div>
+ -->
+
+
+ <div fxLayoutAlign="center" fxFlexFill class='main'>
+  <mat-card fxFlex="100" class="ml-5 mr-5">
+      <p>Sign in with your app id to continue</p>
+  <form [formGroup]='loginForm' fxLayoutAlign="stretch" fxLayout="column">
+    <div>
+    <mat-form-field>
+      <input formControlName="email" matInput placeholder="Email">
+    </mat-form-field>
+  </div>
+<div>
+    <mat-form-field>
+      <input type="password" formControlName="password" matInput placeholder="Password">
+    </mat-form-field>
+  </div>
+  </form>
+  <br>
+    <label>
+      <input type="checkbox" formControlName="checkbox">Stay logged in
+  </label>
+  <br>
+  <button mat-button type="submit" color="accent" (click)=onclick()>Submit</button>
+</mat-card>
+</div>
+
+
+<div style="background-color:#3F5185;">
+<footer>
+  <div class="footer-copyright text-center">© 2020 Copyright:</div>
+</footer>
+</div>
+
+
+<!--   
+<router-outlet></router-outlet>  -->

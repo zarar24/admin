@@ -1,0 +1,169 @@
+<!--Navbar code-->
+ <mat-toolbar >
+  <button mat-icon-button><button mat-raised-button (click)="opened=!opened"><mat-icon>menu</mat-icon></button></button>
+  <h5 class="pl-5">Survey Wings</h5>
+  <span class="example-spacer"></span>
+  
+  <mat-icon >crop_free</mat-icon>
+  <mat-icon class="ml-5">person</mat-icon>
+
+</mat-toolbar> 
+
+
+
+
+<!--Side Navbar-->
+ 
+<mat-sidenav-container >
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    
+          <mat-nav-list class="list">
+     
+      <a mat-list-item routerLink="" class="list"> <mat-icon class="mr-2 pr-2">email</mat-icon>Email Template</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/network" class="list"> <mat-icon  class="mr-2 pr-2">wifi</mat-icon>Networks</a>
+      <mat-divider></mat-divider>
+
+
+       <a mat-list-item  [matMenuTriggerFor]="offer" class="color"><mat-icon class="mr-4">list</mat-icon>Offers<mat-icon class="pl-5">arrow_drop_down</mat-icon></a>
+      <mat-menu #offer>
+      <a mat-menu-item [routerLink]="['/offer']">offer-category</a>
+      <a mat-menu-item [routerLink]="">offer 1</a>
+      </mat-menu> 
+
+      <mat-divider></mat-divider>  
+      <a mat-list-item routerLink="" class="list"><mat-icon  class="mr-2 pr-2">people</mat-icon>Source</a>
+     
+      <mat-divider></mat-divider>
+      <a mat-list-item  [matMenuTriggerFor]="menu2"><mat-icon  class="mr-2 pr-2">list</mat-icon>Surveys<span class="material-icons pl-3 ">arrow_drop_down</span>
+      </a>
+      <mat-menu #menu2="matMenu">
+      <a mat-list-item>Data</a>
+      </mat-menu>
+
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="" class="list"> <mat-icon  class="mr-2 pr-2">email</mat-icon>Trigger Emails</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="" class="list"> <mat-icon  class="mr-2 pr-2"> list_alt</mat-icon>Payment Request</a>
+      
+     <mat-divider></mat-divider>
+     <a mat-list-item  [matMenuTriggerFor]="menu3"><mat-icon  class="mr-2 pr-2">list</mat-icon>Reports<span class="material-icons pl-3 ">arrow_drop_down</span>
+     </a>
+     <mat-menu #menu3="matMenu">
+     <a mat-list-item>Profile</a>
+     </mat-menu>
+      
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="" class="list"><mat-icon  class="mr-2 pr-2"> list_alt</mat-icon>CSV Upload</a>
+      <mat-divider></mat-divider>
+
+    </mat-nav-list>
+    
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container> 
+  
+
+  
+
+<!-- <button mat-button class="dropdown-toggle" [matMenuTriggerFor]="zarar">Menu</button>
+<mat-menu #zarar="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu> -->
+
+
+<!-- <mat-sidenav-container> -->
+  
+
+
+<!-- 
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    
+    <button mat-button><mat-icon class="mr-5 ml-3">email</mat-icon>Email</button>
+    <br>
+    <button mat-button><mat-icon class="mr-4 ml-3">network_wifi</mat-icon>Networks</button>
+    <br> -->
+
+
+    <!-- <button mat-button [matMenuTriggerFor]="menu"><mat-icon class="pr-3 mr-5">list</mat-icon>Offers<span class="material-icons ">arrow_drop_down</span></button>
+    <mat-menu #menu="matMenu">
+<button mat-menu-item>profile</button>
+<button mat-menu-item><mat-icon>dialpad</mat-icon><span>Redial</span>
+</button>
+
+    </mat-menu> -->
+
+    <!-- <br>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>list</mat-icon><button mat-button>Offers</button><span class="material-icons pl-5">arrow_drop_down</span>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voice mail</span>
+      </button>
+    </mat-menu>
+    
+    <br>
+    <button mat-button><mat-icon class="mr-4 ml-3">people</mat-icon>Source</button>
+    <br>
+    <br>
+
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>list</mat-icon><button mat-button>Surveys</button><span class="material-icons pl-4">arrow_drop_down</span>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voice mail</span>
+      </button>
+    </mat-menu>
+    
+
+    <br>
+    <mat-icon>email</mat-icon>
+    <button mat-button>Trigger Emails</button>
+    <br>
+    <mat-icon>list_alt</mat-icon>
+    <button mat-button>Payment Request</button>
+    <br>
+
+
+
+    
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>list</mat-icon><button mat-button>Reports</button><span class="material-icons pl-4">arrow_drop_down</span>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voice mail</span>
+      </button>
+    </mat-menu>
+    
+
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->

@@ -1,0 +1,24 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-sidenav-container{
+  height:550px;
+}
+
+mat-sidenav-content{
+  padding:16px;
+  height:170%;
+} 
+
+mat-sidenav{
+  background-color: #3F5185;
+  width: 250px;
+  height:600px;
+}
+.list{
+  color: aliceblue
+  ;
+}
+.color{
+  color:cornsilk
+}

@@ -1,0 +1,13 @@
+/* .main{
+    padding: 198px;
+    text-align: center; 
+} */
+.main{
+    padding: 218px;
+    text-align: center;
+    height: 100%;
+    background-color: #3F5185;
+}
+.header{
+    text-align: center;
+}
