@@ -2,7 +2,7 @@
     <span>Offer Category</span><br>
     <!-- <p>Dashboard > Category</p> -->
     <span class="example-spacer"></span>
-    <button type="submit" (click)="onClick()" mat-mini-fab aria-label="Example icon button with a plus one icon">
+    <button type="submit" routerLink="add" mat-mini-fab aria-label="Example icon button with a plus one icon">
         <mat-icon>add</mat-icon>
       </button>
 </mat-toolbar>
@@ -38,7 +38,7 @@
           <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
           <mat-menu #menu="matMenu">
             <button mat-menu-item>
-              <a mat-list-item routerLink="edit" >edit</a>
+              <a mat-list-item routerLink="edit-offer" >edit</a>
             </button>
             <button mat-menu-item>
               <a mat-list-item>delete</a>

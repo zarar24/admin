@@ -30,8 +30,8 @@ export class OfferCategoryComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onClick() {
-    // console.log(this.loginForm.value)
-        this.router.navigate(['offer-category/edit-category'])
-  }
+  // onClick() {
+  //   // console.log(this.loginForm.value)
+  //       this.router.navigate(['offer-category/edit-category'])
+  // }
 }
