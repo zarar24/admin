@@ -20,7 +20,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-offer-category',
   templateUrl: './offer-category.component.html',
-  styleUrls: ['./offer-category.component.css']
+  styleUrls: ['./offer-category.component.scss']
 })
 export class OfferCategoryComponent implements OnInit {
 

@@ -1,0 +1,50 @@
+<mat-toolbar-row>
+    <span class="example-spacer"></span>
+    <button mat-mini-fab mat-raised-button class="btn btn-success" (click)=back()>
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-toolbar-row>
+ 
+
+
+<h2>Add/Edit Network</h2>
+<hr>
+
+
+<mat-card>
+<form class="example-form" [formGroup]="contactForm"  novalidate >
+<h3>Add Network</h3>
+<mat-divider></mat-divider>
+
+  <mat-form-field class="example-full-width mt-3">
+      <mat-label>Network Title</mat-label>
+      <input type="text" matInput formControlName="networktitle" placeholder="Enter your network title">
+      <mat-error >Please enter a network title</mat-error>
+    </mat-form-field> 
+  
+
+<mat-form-field class="example-full-width">
+  <mat-label>Network Description</mat-label>
+  <input type="text" matInput formControlName="networkdescription" placeholder="Enter your network description">
+  <mat-error >Please enter a network description</mat-error>
+</mat-form-field> 
+
+    
+   <mat-form-field class="example-full-width">
+      <mat-label>Base URL</mat-label>
+      <input type="text" matInput formControlName="baseurl" placeholder="Enter your base url">
+      <mat-error >Please enter a back url</mat-error>
+    </mat-form-field> 
+
+
+
+    
+  <mat-form-field class="example-full-width">
+      <mat-label>Post Back URL</mat-label>
+      <input type="text" matInput formControlName="postbackurl" placeholder="Enter your url">
+      <mat-error >Please enter a post back url</mat-error>
+    </mat-form-field>
+    
+    <button mat-raised-button type="submit" [disabled]="contactForm.invalid" (click)=onclick()>Submit</button>
+</form>
+</mat-card>

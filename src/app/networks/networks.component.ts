@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 export interface PeriodicElement {
   name: string;
   position: number;
@@ -22,7 +23,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-networks',
   templateUrl: './networks.component.html',
-  styleUrls: ['./networks.component.css']
+  styleUrls: ['./networks.component.scss']
 })
 export class NetworksComponent implements OnInit {
 
@@ -32,4 +33,5 @@ export class NetworksComponent implements OnInit {
   }
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
+
 }
